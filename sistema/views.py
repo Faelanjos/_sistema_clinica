@@ -7,5 +7,10 @@ def index(request):
         'global/base.html'
     )
 
+def rafael(request):
+    return render(
+        request,
+        'global/rafael.html'
+    )
 
-# REQUEST - RESPONSE
+# REQUEST - RESPONSE - RENDER

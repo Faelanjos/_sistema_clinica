@@ -21,7 +21,6 @@ class Paciente(models.Model):
 
 #aqui fica o model da especialidade
 class Especialidade(models.Model):
-    id = models.BigAutoField(primary_key=True)
     nome = models.CharField(max_length = 50)
 
     def __str__(self):
@@ -38,7 +37,7 @@ class Medico(models.Model):
     mensagem = models.TextField(blank=True)
     ativo = models.BooleanField(default=True)
     imagem = models.ImageField(upload_to='img/med/%Y/%m/', blank=True)
-    
+    especialidade = models.ForeignKey(Especialidade, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'
