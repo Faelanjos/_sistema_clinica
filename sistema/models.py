@@ -37,9 +37,28 @@ class Medico(models.Model):
     mensagem = models.TextField(blank=True)
     ativo = models.BooleanField(default=True)
     imagem = models.ImageField(upload_to='img/med/%Y/%m/', blank=True)
-    especialidade = models.ForeignKey(Especialidade, blank=True, on_delete=models.CASCADE)
+    especialidade = models.ForeignKey(Especialidade, default='1', on_delete=models.CASCADE)
+
 
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'
     
+    
+class Consulta(models.Model):
+    agendamento = models.DateTimeField()
+    id_medico = models.ForeignKey(Medico, on_delete=models.CASCADE, null=True)
+    id_paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE, null=True)
+    status = models.CharField(default='A', max_length=1, 
+                                  choices=(
+                                           ('A','Agendada'),
+                                           ('C','Cancelada'),
+                                           ('M', 'Confirmada'),
+                                           ('R','Realizada'),
+                                           )
+                                           )
+    observacao = models.TextField(blank=True,)
+
+
+    def __str__(self):
+        return f'Consulta {self.status} na data {self.agendamento}'
     
