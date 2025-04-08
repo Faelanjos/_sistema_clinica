@@ -58,4 +58,10 @@ mensagem
 
 [Endereço]
 
+## Aula do dia 08/04/2025
+1. INJEÇÃO DE CONTEXTO -> utilizando o dicionário ``CONTEXT`` para acessar todos os objetos.
+- class Paciente (Modelo - Tabela)
+- Acessar todos os objetos(instancias) que foram criadas a partir do Paciente
+- Renderizar todos esses contatos no arquivo lista.html
+
 
