@@ -11,8 +11,8 @@ app_name = 'sistema'
 #Lista responsável por organizar as urls do sistema
 urlpatterns = [
     path('', views.index, name='index'),
-    path('listar/', views.listarPacientes, name='listar'),
-    path('listarmedicos/', views.listarMedicos, name='listarmedicos')
+    path('pacientes/', views.listarPacientes, name='pacientes'),
+    path('medicos/', views.listarMedicos, name='medicos')
 ]
 
 #path() -> é um método do Django que permite realizar a inserção de uma uma URL
