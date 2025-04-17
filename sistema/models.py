@@ -37,7 +37,7 @@ class Medico(models.Model):
     mensagem = models.TextField(blank=True)
     ativo = models.BooleanField(default=True)
     imagem = models.ImageField(upload_to='img/med/%Y/%m/', blank=True)
-    especialidade_id = models.ForeignKey(Especialidade, default='1', on_delete=models.CASCADE)
+    especialidade_id = models.ForeignKey(Especialidade, default='1', on_delete=models.CASCADE, verbose_name='Especialidade')
 
 
     def __str__(self):
