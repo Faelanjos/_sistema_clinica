@@ -13,6 +13,7 @@
 9. Para instalar o Pillow no projeto-> python -m pip install Pillow
 10. Para gerar o pacote de migração -> python manage.py makemigrations
 11. Para rodar as alterações desse pacote -> python manage.py migrate
+12. Para coletar todos os arquivos estaticos do projeto -> python manage.py collectstatic
 
 
 
@@ -65,3 +66,7 @@ mensagem
 - Renderizar todos esses contatos no arquivo lista.html
 
 
+
+## 1. Incluir alguns comandos no settings.py para tratar as imagens;
+## 2. Ir no urls.py e incluir uma rota dinamica para imagens;
+## 3 ir no listar.html e incluir o campo imagem;
