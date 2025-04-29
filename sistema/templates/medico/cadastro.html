@@ -1,12 +1,27 @@
-<h1>Cadastrar Medico</h1>
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+    <head>
+        {% include "global/partials/_head.html" %}
+    </head>
+    <body>
+        <header>
+            {% include "global/partials/_header.html" %}
+        </header>
+        <h1>Cadastrar Medico</h1>
 
-<form method='POST'>
-    {% csrf_token %}
+        <form method='POST'>
+            {% csrf_token %}
 
-    {{form.as_p}}
+            {{form.as_p}}
 
-    <button type='submit'>Salvar</button>
+            <button type='submit'>Salvar</button>
 
 
 
-</form>
+        </form>
+        <footer>
+            {% include "global/partials/_footer.html" %}
+        </footer>
+    </body>
+</html>

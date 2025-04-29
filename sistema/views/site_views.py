@@ -8,6 +8,12 @@ def index(request):
     )
 
 
+def login(request):
+    return render(
+        request,
+        'usuario/login.html'
+    )
+
 
 
 # REQUEST - RESPONSE - RENDER

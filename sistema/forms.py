@@ -5,7 +5,7 @@ from .models import Medico
 class PacienteForm(forms.ModelForm):
     class Meta:
         model = Paciente
-        fields = [ 'nome', 'sobrenome', 'email', 'telefone',]
+        fields = [ 'nome', 'sobrenome', 'email', 'telefone', 'mensagem',]
 
 
 class MedicoForm(forms.ModelForm):

@@ -16,6 +16,7 @@ urlpatterns = [
     path('pacientes/perfil/<int:paciente_id>', views.perfilPaciente, name='perfilPaciente'),
     path('medicos/', views.listarMedicos, name='medicos'),
     path('medicos/novo/', views.criarMedico, name="criarMedico"),
+    path('login/', views.login, name='login')
 ]
 
 #path() -> é um método do Django que permite realizar a inserção de uma uma URL

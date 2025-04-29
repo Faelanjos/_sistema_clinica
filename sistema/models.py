@@ -14,6 +14,7 @@ class Paciente(models.Model):
     mensagem = models.TextField(blank=True)
     ativo = models.BooleanField(default=True)
     imagem = models.ImageField(upload_to='img/%Y/%m/', blank=True)
+    
 
     def __str__(self):
         return f'{self.nome} {self.sobrenome}'
@@ -61,4 +62,3 @@ class Consulta(models.Model):
 
     def __str__(self):
         return f'Consulta {self.status} na data {self.agendamento}'
-    
